@@ -5,9 +5,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
+    //Find task by name
 }
 
 //JpaRepository<Task, Long>
 // Repository connects to the database to do CRUD operations
 // Jpa Repository gives pre-defined methods.
 // <Task, Long> = the model and the type of the primary key
+
+// implement custom function to find specific data.
+// try to find a task by a given name

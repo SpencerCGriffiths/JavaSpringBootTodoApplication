@@ -21,11 +21,11 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    public void createTask(String title) {
+    public Task createTask(String title) {
         Task task = new Task();
         task.setTitle(title);
         task.setCompleted(false);
-        taskRepository.save(task);
+        return taskRepository.save(task);
     }
 
     public void deleteTask(Long id) {

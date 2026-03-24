@@ -43,3 +43,43 @@ Port: 3306
 Credentials = these are the two fields in the initial command:
 -e MYSQL_USER=dev_user \
 -e MYSQL_PASSWORD=dev_pass \
+
+## Step 5: Run Java Application
+
+## Step 6: ...
+
+
+Areas for improvement on this project: 
+
+1) Testing -> 
+Implement test specs including mocking where appropriate
+
+2) Exception Handling -> 
+Explore Global Exception Handler (@RestControllerAdvice)
+Define the validation rules for each of the exception classes i.e. IllegalArgumentException
+Use this in conjunction with @ExceptionHandler
+
+3) Create Custom repository methods to search for task by ID
+
+4) Figure out @Controller vs @RestController ->
+Try to ensure that the whole page does not refresh but it only calls one small part of the list to refresh
+Similar to Single Page Applications. 
+
+5) Integrate Apache Camel into this project ->
+Unsure how this would work. Possibly use Apache to read the db and return a Json output of all tasks
+
+6) Utilise postman as appose to the UI 
+
+7) Work on seperating a front end from a back end and how they communicate
+If not possible in this project implement in an Order/Inventory service.
+Order Service takes the order -> Inventory Service, check inventory and returns to the order
+
+8) DataJpaTests / Integration testing
+
+Additional Learning notes: 
+When looking at mutating objects look at alternatives to .copy() that I should learn
+This can be done in multiple ways:
+1) Lombok Builder -> adding @Builder to the Task class
+2) Manual Copy constructor -> Amend the Task constructor
+3) BeanUtils -> Use BeanUtils.copyProperties
+These should all be further explored.
